@@ -9,28 +9,26 @@ public class Trigonometria {
 			double resulsen=Math.sin(angsen);
 			
 			double angcos=Math.toRadians(i);
-			double resulcos=Math.sin(angcos);	
+			double resulcos=Math.cos(angcos);	
 			
 			double angtan=Math.toRadians(i);
-			double resultan=Math.sin(angtan);
+			double resultan=Math.tan(angtan);
 
-			if ((i == 90) || (i == 270)){
-
-			System.out.print("angulo "); System.out.print(i); System.out.print(" ");
+            System.out.print("angulo "); System.out.print(i); System.out.print(" ");
 			System.out.print("seno "); System.out.printf("%.3f", resulsen); System.out.print(" ");
 			System.out.print("cosseno "); System.out.printf("%.3f", resulcos); System.out.print(" ");
+
+			if ((i == 90) || (i == 270)){
 			System.out.print("tângente "); System.out.print("não existe"); System.out.print("\n");
-			System.out.print("--------------------------------------------------------------------------------------------------------------- \n");
 
 
 			}
 			else{
-			System.out.print("angulo "); System.out.print(i); System.out.print(" ");
-			System.out.print("seno "); System.out.printf("%.3f", resulsen); System.out.print(" ");
-			System.out.print("cosseno "); System.out.printf("%.3f", resulcos); System.out.print(" ");
 			System.out.print("tângente "); System.out.printf("%.3f", resultan); System.out.print("\n");
-			System.out.print("--------------------------------------------------------------------------------------------------------------- \n");
 			}
+			
+			System.out.print("--------------------------------------------------------------------------------------------------------------- \n");
+
 		}
 
 
