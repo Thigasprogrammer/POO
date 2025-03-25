@@ -18,7 +18,7 @@ public class Fatorial { //a classe deve ser sempre o nome do arquivo, se for cla
 		Scanner digitar = new Scanner(System.in); // padrão para criar um input, o único alteravel é o nome da variável 'digitar'
 		int num;
 		
-		System.out.print("DIGITE UM VALOR INTEIRO POSITIVO "); //print do java, 	esse daqui serve para o usuario saber  o que digitar
+		System.out.print("DIGITE UM VALOR INTEIRO POSITIVO "); //print do java, esse daqui serve para o usuario saber o que digitar
 
 		num = digitar.nextInt(); // input do java, é o nome da variável scanner e nextint ou nextfloat, etc
 
