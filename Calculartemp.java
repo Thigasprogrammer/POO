@@ -19,12 +19,12 @@ public class Calculartemp {
         float q;
 
         System.out.print("digite a massa em gramas do corpo: ");
-        massa = teclado.nextfloat();
+        massa = teclado.nextFloat();
         System.out.print("digite o calor específico da substância a em graus Celsius: ");
-        calor = teclado.nextfloat();
+        calor = teclado.nextFloat();
         System.out.print("digite a variação de temperatura em graus Celsius do corpo: ");
-        vartemp = teclado.nextfloat()
-        q = massa×calor×vartemp;
+        vartemp = teclado.nextFloat();
+        q = massa*calor*vartemp;
 
         if(massa > 0){
             System.out.printf("A quantidade de calor necessária para aquecer o corpo é de %.2fº Celsius", q);
