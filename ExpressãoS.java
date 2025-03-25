@@ -8,7 +8,6 @@ public class ExpressãoS {
 		float s;
 		float q = 1.00f;
 		float sum = 0;
-		float root;
 
 		for(float i = 38.00f; i >= 2; i--){
 			s = ((i-1) * i)/ q;
