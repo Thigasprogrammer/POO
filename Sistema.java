@@ -1,41 +1,35 @@
-/* 1. Dentro da pasta src, crie uma pasta chamada Balanca (balança) e armazene ali todos os
-códigos Java solicitados a seguir.
-Construa uma classe de domínio chamada Pessoa. Uma Pessoa conhece o seu nome, idade,
-gênero, peso e altura. Além disso, qualquer Pessoa é capaz de calcular e informar o valor
-numérico do seu IMC (índice de massa corporal) e do seu BT (percentual de gordura corporal).
-Construa uma classe Sistema que execute o seguinte processamento:
-- Leia uma quantidade indeterminada de dados referentes à pessoas do tipo Pessoa. Para cada
-pessoa lida, criar um objeto Pessoa e usar suas propriedades para calcular e exibir os seus
-valores de IMC e BC. A leitura é interrompida quando é fornecido um nome de pessoa igual a
-vazio.
-Antes do término do programa, exibir os dados da pessoa com maior IMC.
-(*) Pesquise na internet como se clacula o IMC e o BT.  */
+// Arquivo Sistema.java
 import java.util.Scanner;
-
-public class Sistema{
+import java.lang.Math;
+public class Sistema {
 	public static void main(String[] args){
-		Scanner teclado = new Scanner(System.in);
-		Pessoa person = new Pessoa();
+	Scanner teclado = new Scanner(System.in);
+	Circulo tampa;
+	double chapaAlt, chapaLarg, chapaCusto, tampaDiam;
 
-		System.out.print("Nome: ");
-		person.nome = teclado.nextline();
+	System.out.println("DADOS DE ENTRADA");
+	System.out.println("================");
+	System.out.print("Largura da chapa (m): ");
+	chapaLarg = teclado.nextDouble();
 
-		while(person.nome != ""){
-		
-			System.out.print("Peso: ");
-			person.peso = teclado.nextDouble();
+	System.out.print("Altura da chapa (m): ");
+	chapaAlt = teclado.nextDouble();
+
+	System.out.print("Preço da chapa (R$): ");
+	chapaCusto = teclado.nextDouble();
+
+	System.out.print("Diâmetro da tampa do bueiro (m): ");
+	tampaDiam = teclado.nextDouble();
+
+	// Processando a saída da aplicação
+	tampa = new Circulo(); // define uma variavel do tipo circulo, assim como se declara teclado do tipo Scanner
+	tampa.raio = tampaDiam/2; // pega a variavel raio dentro da classe circulo e iguala ela a diametro/2
+	double quantTampas = Math.ceil((chapaAlt * chapaLarg)/tampa.area());
+	double tampaCusto = chapaCusto/quantTampas;
 	
-			System.out.print("Altura: ");
-			person.altura = teclado.nextDouble();
-	
-
-			System.out.print("Nome: " + person.nome);
-			System.out.println("IMC: " + person.imc());
-	
-			System.out.print("Nome da próxima pessoa digite caractere vazio para terminar o programa: ");
-			person.nome = teclado.nextline();
-		}
-	}
-
-
-}
+	System.out.println("\nRELATÓRIO DE SAÍDA");
+	System.out.print("Quantidade de tampas de bueiro com diâmetro de ");
+	System.out.printf("%.2f m: %.0f\n", tampaDiam, quantTampas);
+	System.out.printf("Custo de cada tampa (R$): %.2f\n", tampaCusto);
+	} // main
+} // Sistema
